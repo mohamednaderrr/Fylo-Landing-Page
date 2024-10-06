@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&family=Raleway:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: 0;
+  box-sizing: border-box;
+  transition: all ease 0.2s;
+  list-style-type: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  line-height: 0;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* remove all button styles */
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+body {
+  line-height: 1.3;
+  text-rendering: optimizeSpeed;
+  font-family: 'Raleway', sans-serif;
+  background-color: white;
+}
+
+/* colors  */
+:root {
+  --dark-blue: hsla(243, 87%, 12%, 1);
+  --gray: hsla(238, 22%, 44%, 1);
+  --light-gray: #F8F8FE;
+  --white: hsla(0, 0%, 100%, 1);
+  --blue: hsla(224, 93%, 58%, 1);
+  --green: hsla(170, 45%, 43%, 1);
+}
+
+
+
+/* typography  */
+
+.h1 {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 46px;
+  color: var(--dark-blue);
+}
+
+.body-text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 24px;
+  color: var(--dark-blue);
+}
+
+.bold {
+  font-weight: 400;
+}
+
+.h1-white {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 46px;
+  color: var(--light-gray);
+}
+
+.container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding-inline: 40px;
+}
+
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-block: 60px;
+}
+
+.flex-inline {
+  display: flex;
+  column-gap: 54px;
+}
+
+.flex-list {
+  display: flex;
+  gap: 100px;
+}
+
+.flex-inline-2 {
+  display: flex;
+  column-gap: 54px;
+  justify-content: space-between;
+}
+
+.flex-inline-3 {
+  display: flex;
+  column-gap: 20px;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.form-1,
+.form-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.flex-column-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.flex-column-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.flex-column-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+
+.grid-2x {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.grid-2x-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  justify-items: center;
+}
+
+
+.box-shadow {
+  box-shadow: 0px 0px 16px 4px rgba(87, 89, 136, 0.102);
+}
+
+
+.menu {
+  color: var(--dark-blue);
+}
+
+.social-icons a:hover {
+  transform: translatey(-6px);
+}
+
+.social-icons svg {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  fill: white;
+  gap: 40px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.flex-social {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.flex-hero {
+  display: flex;
+  row-gap: 20px;
+  flex-direction: column;
+}
+
+.hero-text {
+  padding-top: 60px;
+}
+
+.form-1 {
+  gap: 20px;
+}
+
+.btn {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+
+  padding: 12px 60px;
+
+  color: white;
+  background-color: var(--blue);
+  border-radius: 4px;
+  transition: ease 0.5s;
+}
+
+.btn:hover,
+a:hover,
+.logo:hover,
+.logo-white:hover {
+  opacity: 80%;
+  transition: ease 0.5s;
+}
+
+input {
+  border: 2px solid var(--blue);
+  border-radius: 4px;
+  margin-right: 10px;
+  padding: 6px 50px;
+}
+
+.input-mail {
+  border-radius: 4px;
+  text-align: left;
+  padding: 6px 100px;
+}
+
+.bg-light {
+  background-color: var(--light-gray);
+}
+
+.bg-gray {
+  background-color: var(--gray);
+}
+
+.gray {
+  color: var(--light-gray);
+  opacity: 70%;
+}
+
+.decorative-image {
+  width: 100%;
+}
+
+.pt-50 {
+  padding-top: 50px;
+}
+
+.pb-70 {
+  padding-bottom: 70px;
+}
+
+.pb-16 {
+  padding-bottom: 16px;
+}
+
+.pb-30 {
+  padding-bottom: 30px;
+}
+
+.card {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  padding: 34px;
+  border-radius: 8px;
+  max-width: 350px;
+}
+
+.quote {
+  max-width: 20px;
+}
+
+.profile {
+  display: flex;
+  gap: 14px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 15px;
+  color: var(--dark-blue);
+}
+
+.profile-image {
+  border-radius: 50%;
+  max-width: 32px;
+  height: 100%;
+}
+
+.quote-text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 23px;
+  color: var(--dark-blue);
+}
+
+.fs-16 {
+  font-size: 14px;
+}
+
+.fylo-link {
+  display: flex;
+  gap: 10px;
+  color: var(--green);
+  border-bottom: 1px solid var(--green);
+  max-width: max-content;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.arrow {
+  display: block;
+  max-width: 20px;
+  height: 100%;
+}
+
+.mail-section {
+  display: flex;
+  padding-block: 100px 120px;
+}
+
+footer {
+  background-color: var(--dark-blue);
+  color: var(--light-gray);
+}
+
+footer a {
+  color: var(--light-gray);
+}
+
+.footer-box {
+  padding-block: 70px;
+}
+
+/* mobile */
+
+@media (max-width: 900px) {
+  .grid-2x {
+    display: flex;
+    gap: 30px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+
+  .mid-section {
+    padding-top: 60px;
+  }
+
+  .card {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    align-items: flex-start;
+  }
+
+  .grid-2x-form {
+    display: flex;
+    gap: 10px;
+    justify-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .input-mail {
+    border-radius: 4px;
+    text-align: center;
+    padding: 6px 100px;
+  }
+
+  .form-1 {
+    gap: 20px;
+  }
+
+  .form-2 {
+    gap: 0px;
+  }
+
+
+
+  .form-1,
+  .form-2 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  p .body-text.gray {
+    text-align: left;
+  }
+
+  .flex-list {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .flex-inline-2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex-column-3,
+  .flex-list {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 650px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .form-1,
+  .form-2 {
+    display: flex;
+    text-align: center;
+    align-items: flex-start;
+  }
+
+  .input-mail {
+    border-radius: 4px;
+    text-align: center;
+    padding: 6px 100px;
+    max-width: 250px;
+  }
+
+  .logo {
+    max-width: 120px;
+  }
+}
